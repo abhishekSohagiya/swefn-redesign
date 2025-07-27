@@ -33,36 +33,60 @@ export default function Products() {
       color: "bg-blue-500",
       products: [
         {
-          name: "Amoxicillin",
-          strength: "250mg, 500mg",
-          dosageForm: "Capsules",
-          packaging: "10x10 Blister Pack",
-          indication: "Bacterial infections, respiratory tract infections",
-          composition: "Amoxicillin Trihydrate"
+          name: "Azithromycin",
+          strength: "250mg",
+          dosageForm: "Tablets",
+          packaging: "Blister 3 TAB/6 TAB",
+          indication: "Respiratory infections, skin infections",
+          composition: "Azithromycin"
         },
         {
           name: "Azithromycin",
-          strength: "250mg, 500mg",
+          strength: "500mg",
           dosageForm: "Tablets",
-          packaging: "10x3 Blister Pack",
+          packaging: "Blister 5 TAB/10 TAB",
           indication: "Respiratory infections, skin infections",
-          composition: "Azithromycin Dihydrate"
+          composition: "Azithromycin"
         },
         {
-          name: "Ciprofloxacin",
-          strength: "250mg, 500mg",
+          name: "Ofloxacin",
+          strength: "200mg",
           dosageForm: "Tablets",
-          packaging: "10x10 Blister Pack",
-          indication: "UTI, gastrointestinal infections",
-          composition: "Ciprofloxacin Hydrochloride"
+          packaging: "Alu-Alu 10 TAB",
+          indication: "UTI, respiratory tract infections",
+          composition: "Ofloxacin"
         },
         {
-          name: "Cephalexin",
-          strength: "250mg, 500mg",
-          dosageForm: "Capsules",
-          packaging: "10x10 Blister Pack",
-          indication: "Skin infections, bone infections",
-          composition: "Cephalexin Monohydrate"
+          name: "Ofloxacin + Ornidazole",
+          strength: "200mg + 500mg",
+          dosageForm: "Tablets",
+          packaging: "Blister 10 TAB",
+          indication: "Mixed bacterial and protozoal infections",
+          composition: "Ofloxacin + Ornidazole"
+        },
+        {
+          name: "Levofloxacin",
+          strength: "250mg",
+          dosageForm: "Tablets",
+          packaging: "Alu-Alu 10 TAB",
+          indication: "Respiratory tract infections, UTI",
+          composition: "Levofloxacin"
+        },
+        {
+          name: "Levofloxacin",
+          strength: "500mg",
+          dosageForm: "Tablets",
+          packaging: "Alu-Alu 10 TAB",
+          indication: "Severe respiratory infections, complicated UTI",
+          composition: "Levofloxacin"
+        },
+        {
+          name: "Norfloxacin + Tinidazole",
+          strength: "400mg + 600mg",
+          dosageForm: "Tablets",
+          packaging: "Blister 10 TAB",
+          indication: "GI infections, UTI with protozoal coverage",
+          composition: "Norfloxacin + Tinidazole"
         }
       ]
     },
