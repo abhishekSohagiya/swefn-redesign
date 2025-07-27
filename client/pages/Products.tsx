@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Pill, Heart, Shield, Activity, Brain, Stethoscope, Zap, Microscope, Plus, Download, ArrowLeft, Package, Tablet, Capsule } from "lucide-react";
+import { Pill, Heart, Shield, Activity, Brain, Stethoscope, Zap, Microscope, Plus, Download, ArrowLeft, Package, Tablet } from "lucide-react";
 import { useState } from "react";
 
 interface Product {
