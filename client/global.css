@@ -112,10 +112,26 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent;
+  }
+
+  .bg-pharma-red {
+    background-color: hsl(var(--pharma-red));
+  }
+
+  .bg-pharma-red-light {
+    background-color: hsl(var(--pharma-red-light));
+  }
+
+  .text-pharma-red {
+    color: hsl(var(--pharma-red));
+  }
+
+  .text-pharma-gray {
+    color: hsl(var(--pharma-gray));
   }
 
   .bg-glass {
-    @apply bg-white/70 backdrop-blur-sm border border-white/20;
+    @apply bg-white/90 backdrop-blur-sm border border-gray-200/50 shadow-sm;
   }
 }
