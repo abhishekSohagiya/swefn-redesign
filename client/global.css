@@ -6,11 +6,11 @@
 
 @layer base {
   /**
-   * Modern color palette optimized for the Pixel Studio brand
-   * Using HSL values for smooth gradients and better color manipulation
+   * Pharmaceutical color palette inspired by Rednex design
+   * Professional red and clean white/gray theme
    */
   :root {
-    --background: 210 20% 98%;
+    --background: 0 0% 100%;
     --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
@@ -19,30 +19,32 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    --primary: 217 91% 60%;
+    --primary: 0 84% 50%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96%;
+    --secondary: 210 17% 95%;
     --secondary-foreground: 215 25% 27%;
 
-    --muted: 210 40% 96%;
+    --muted: 210 17% 95%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 210 40% 96%;
-    --accent-foreground: 215 25% 27%;
+    --accent: 0 84% 50%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --ring: 0 84% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Brand gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(243 75% 59%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(210 20% 98%) 0%, hsl(220 38% 89%) 100%);
+    /* Pharmaceutical theme colors */
+    --pharma-red: 0 84% 50%;
+    --pharma-red-light: 0 84% 97%;
+    --pharma-gray: 220 9% 46%;
+    --pharma-gray-light: 210 17% 95%;
   }
 
   .dark {
