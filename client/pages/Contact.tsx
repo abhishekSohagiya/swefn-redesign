@@ -4,24 +4,25 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, Building2 } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-white">
       <Header />
-      
-      <main className="container mx-auto px-6 py-20">
-        {/* Hero Section */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6">
-            Get in <span className="text-gradient">Touch</span>
-          </h1>
-          <p className="text-xl text-slate-600 leading-relaxed">
-            Ready to start your next project? We'd love to hear from you. 
-            Let's discuss how we can bring your vision to life.
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-red-500 to-red-600 py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">Contact Us</h1>
+          <p className="text-xl text-red-100 max-w-3xl mx-auto leading-relaxed">
+            Get in touch with our team for pharmaceutical manufacturing inquiries,
+            partnerships, or any questions about our products and services.
           </p>
         </div>
+      </section>
+
+      <main className="container mx-auto px-6 py-20">
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
