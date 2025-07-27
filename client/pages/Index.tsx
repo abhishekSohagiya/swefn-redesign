@@ -1,30 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Code, Palette, Zap, Github, Twitter, Mail } from "lucide-react";
+import { ArrowRight, Code, Palette, Zap } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Index() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      {/* Header */}
-      <header className="container mx-auto px-6 py-8">
-        <nav className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-              <Code className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-slate-800">Pixel Studio</span>
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <a href="#home" className="text-slate-600 hover:text-slate-800 transition-colors">Home</a>
-            <a href="#about" className="text-slate-600 hover:text-slate-800 transition-colors">About</a>
-            <a href="#services" className="text-slate-600 hover:text-slate-800 transition-colors">Services</a>
-            <a href="#contact" className="text-slate-600 hover:text-slate-800 transition-colors">Contact</a>
-          </div>
-          <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-            Get Started
-          </Button>
-        </nav>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section id="home" className="container mx-auto px-6 py-20">
