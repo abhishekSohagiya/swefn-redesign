@@ -12,7 +12,7 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-slate-900">
         <img
-          src="https://images.pexels.com/photos/5953713/pexels-photo-5953713.jpeg"
+          src="https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2F1bc575aa8f044ed59c1b098ebe168576"
           alt="Pharmaceutical production facility"
           className="absolute inset-0 h-full w-full object-cover"
         />
