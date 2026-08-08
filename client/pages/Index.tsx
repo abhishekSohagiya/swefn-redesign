@@ -80,12 +80,14 @@ export default function Index() {
             </div>
             <div className="grid gap-4 md:grid-cols-3">
               {[
-                { mark: "FDCA", title: "FDCA compliance", text: "Domestic regulatory readiness" },
-                { mark: "WHO", title: "WHO aligned", text: "Global health standards" },
-                { mark: "GLP", title: "GLP practices", text: "Good laboratory practice" },
+                { mark: "FDCA", logo: "https://fdca.co.in/files/assets_login/img/logo.png", title: "FDCA compliance", text: "Domestic regulatory readiness" },
+                { mark: "WHO", logo: "https://www.who.int/ResourcePackages/WHO/assets/dist/images/logos/en/h-logo-white.svg", title: "WHO aligned", text: "Global health standards" },
+                { mark: "GLP", logo: null, title: "GLP practices", text: "Good laboratory practice" },
               ].map((item) => (
                 <div key={item.mark} className="flex items-center gap-4 rounded-xl border border-slate-700 bg-white p-4">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-red-500 text-center text-sm font-black tracking-tight text-red-500">{item.mark}</div>
+                  <div className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-center text-sm font-black tracking-tight ${item.logo ? item.mark === "WHO" ? "bg-[#0875b9] p-3" : "border-2 border-red-500 p-2" : "border-2 border-red-500 text-red-500"}`}>
+                    {item.logo ? <img src={item.logo} alt={`${item.mark} logo`} className="max-h-full max-w-full object-contain" /> : item.mark}
+                  </div>
                   <div>
                     <div className="font-semibold text-slate-900">{item.title}</div>
                     <div className="mt-1 text-sm text-slate-500">{item.text}</div>
