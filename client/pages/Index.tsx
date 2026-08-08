@@ -27,14 +27,6 @@ export default function Index() {
             <p className="text-xl lg:text-2xl text-gray-200 mb-8 leading-relaxed max-w-2xl">
               We are united for a mission to help people for their dream of healthy life!!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white text-lg px-8 py-4">
-                Products <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 text-lg px-8 py-4">
-                Contact Us
-              </Button>
-            </div>
           </div>
         </div>
         
