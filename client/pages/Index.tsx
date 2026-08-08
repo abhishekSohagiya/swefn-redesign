@@ -30,12 +30,6 @@ export default function Index() {
           </div>
         </div>
         
-        {/* Decorative elements */}
-        <div className="absolute bottom-0 left-0 w-full">
-          <svg viewBox="0 0 1200 120" className="w-full h-auto">
-            <path d="M0,60 L50,80 L100,60 L150,80 L200,60 L250,80 L300,60 L350,80 L400,60 L450,80 L500,60 L550,80 L600,60 L650,80 L700,60 L750,80 L800,60 L850,80 L900,60 L950,80 L1000,60 L1050,80 L1100,60 L1150,80 L1200,60 L1200,120 L0,120 Z" fill="white" />
-          </svg>
-        </div>
       </section>
 
       {/* Welcome Section */}
@@ -103,19 +97,25 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="relative overflow-hidden bg-slate-900 py-20">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2F1bc575aa8f044ed59c1b098ebe168576"
+          alt="Swefn pharmaceutical manufacturing facility"
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-slate-950/75"></div>
+        <div className="relative container mx-auto px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <p className="mb-4 text-sm font-bold tracking-[0.2em] text-red-500">WELCOME TO SWEFN</p>
-              <h2 className="text-4xl font-bold leading-tight text-pharma-gray lg:text-5xl">
+              <p className="mb-4 text-sm font-bold tracking-[0.2em] text-red-400">WELCOME TO SWEFN</p>
+              <h2 className="text-4xl font-bold leading-tight text-white lg:text-5xl">
                 Expertise built for better health.
               </h2>
               <div className="mt-7 max-w-2xl">
-                <p className="text-lg leading-relaxed text-pharma-gray mb-6">
+                <p className="text-lg leading-relaxed text-slate-200 mb-6">
                   Swefn Pharmaceutical Private Limited is an Ahmedabad-based manufacturer focused on dependable tablets and capsules for domestic and international partners.
                 </p>
-                <p className="text-lg leading-relaxed text-pharma-gray">
+                <p className="text-lg leading-relaxed text-slate-200">
                   Discover our manufacturing capabilities, quality systems, and product portfolio built around consistent standards and responsive partnership.
                 </p>
               </div>
