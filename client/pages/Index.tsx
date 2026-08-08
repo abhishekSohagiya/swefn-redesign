@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Building2, Award, Users, Globe, Microscope, Heart, Shield, Pill, Factory } from "lucide-react";
+import { ArrowRight, Award, Microscope, Shield, Pill, Factory } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -10,8 +10,13 @@ export default function Index() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative overflow-hidden bg-slate-900">
+        <img
+          src="https://images.pexels.com/photos/5953713/pexels-photo-5953713.jpeg"
+          alt="Pharmaceutical production facility"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-slate-900/45"></div>
         <div className="relative container mx-auto px-6 py-24 lg:py-32">
           <div className="max-w-4xl">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -44,18 +49,29 @@ export default function Index() {
       {/* Welcome Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="text-red-500">WELCOME TO</span> <span className="text-pharma-gray">SWEFN PHARMACEUTICALS LTD.</span>
-            </h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-pharma-gray leading-relaxed mb-6">
-                Swefn Pharmaceutical Private Limited is an established pharmaceutical manufacturer based in Ahmedabad, Gujarat, India. 
-                We specialize in the production of solid oral dosage forms, specifically tablets and capsules, with a manufacturing capacity of 100 million units per month.
-              </p>
-              <p className="text-lg text-pharma-gray leading-relaxed">
-                Our company is locally and globally integrated, offering a wide range of products and services to meet both domestic and international regulatory standards, including those set by PICs and MHRA.
-              </p>
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div>
+              <p className="mb-4 text-sm font-bold tracking-[0.2em] text-red-500">WELCOME TO SWEFN</p>
+              <h2 className="text-4xl font-bold leading-tight text-pharma-gray lg:text-5xl">
+                Expertise built for better health.
+              </h2>
+              <div className="mt-7 max-w-2xl">
+                <p className="text-lg leading-relaxed text-pharma-gray mb-6">
+                  Swefn Pharmaceutical Private Limited is an established pharmaceutical manufacturer based in Ahmedabad, Gujarat, India.
+                  We specialize in the production of solid oral dosage forms, specifically tablets and capsules, with a manufacturing capacity of 100 million units per month.
+                </p>
+                <p className="text-lg leading-relaxed text-pharma-gray">
+                  Our company is locally and globally integrated, offering a wide range of products and services to meet both domestic and international regulatory standards, including those set by PICs and MHRA.
+                </p>
+              </div>
+            </div>
+            <div className="relative mx-auto w-full max-w-md">
+              <div className="absolute -inset-4 rounded-[2rem] bg-red-50"></div>
+              <img
+                src="https://images.pexels.com/photos/9574339/pexels-photo-9574339.jpeg"
+                alt="Pharmaceutical quality-control team in a sterile laboratory"
+                className="relative h-[440px] w-full rounded-[1.5rem] object-cover shadow-xl"
+              />
             </div>
           </div>
         </div>
@@ -118,11 +134,18 @@ export default function Index() {
       {/* Product Categories */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-pharma-gray mb-4">Our Product Portfolio</h2>
-            <p className="text-xl text-pharma-gray max-w-2xl mx-auto">
-              Comprehensive range of pharmaceutical products across multiple therapeutic categories
-            </p>
+          <div className="mb-16 grid items-end gap-8 lg:grid-cols-[1fr_360px]">
+            <div>
+              <h2 className="text-4xl font-bold text-pharma-gray mb-4">Our Product Portfolio</h2>
+              <p className="text-xl text-pharma-gray max-w-2xl">
+                Comprehensive range of pharmaceutical products across multiple therapeutic categories
+              </p>
+            </div>
+            <img
+              src="https://images.pexels.com/photos/7904438/pexels-photo-7904438.jpeg"
+              alt="Assortment of pharmaceutical capsules and tablets"
+              className="h-40 w-full rounded-2xl object-cover"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
