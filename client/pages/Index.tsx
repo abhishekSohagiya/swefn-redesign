@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Award, Microscope, Shield, Pill, Factory } from "lucide-react";
+import { ArrowRight, Award, Microscope, Shield, ShieldCheck, Pill, Factory } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -205,6 +205,29 @@ export default function Index() {
                 <div key={item.title} className="rounded-xl border border-slate-700 bg-slate-800 p-5">
                   <div className="mb-2 text-2xl font-bold text-red-400">{item.title}</div>
                   <div className="text-sm leading-relaxed text-slate-300">{item.text}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-12 border-t border-slate-700 pt-10">
+            <div className="mb-6 flex items-center gap-3">
+              <ShieldCheck className="h-5 w-5 text-red-400" />
+              <h3 className="text-lg font-semibold text-white">Compliance and quality frameworks</h3>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {[
+                { mark: "FDCA", title: "FDCA compliance", text: "Domestic regulatory readiness" },
+                { mark: "WHO", title: "WHO aligned", text: "Global health standards" },
+                { mark: "GLP", title: "GLP practices", text: "Good laboratory practice" },
+              ].map((item) => (
+                <div key={item.mark} className="flex items-center gap-4 rounded-xl border border-slate-700 bg-white p-4">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-red-500 text-center text-sm font-black tracking-tight text-red-500">
+                    {item.mark}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-slate-900">{item.title}</div>
+                    <div className="mt-1 text-sm text-slate-500">{item.text}</div>
+                  </div>
                 </div>
               ))}
             </div>
