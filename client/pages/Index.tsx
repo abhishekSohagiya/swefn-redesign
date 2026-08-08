@@ -47,6 +47,22 @@ export default function Index() {
       </section>
 
       {/* Welcome Section */}
+      <section className="border-y border-red-100 bg-red-50 py-10">
+        <div className="container mx-auto grid grid-cols-2 gap-6 px-6 md:grid-cols-4 md:gap-0">
+          {[
+            { value: "100M", label: "Units per month" },
+            { value: "42K", label: "Square feet facility" },
+            { value: "PICs", label: "Quality aligned" },
+            { value: "MHRA", label: "Standards aligned" },
+          ].map((stat, index) => (
+            <div key={stat.value} className={`px-4 text-center ${index > 1 ? "md:border-l md:border-red-200" : index > 0 ? "md:border-l md:border-red-200" : ""}`}>
+              <div className="text-3xl font-bold text-red-500 lg:text-4xl">{stat.value}</div>
+              <div className="mt-1 text-sm font-medium text-pharma-gray">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -57,11 +73,10 @@ export default function Index() {
               </h2>
               <div className="mt-7 max-w-2xl">
                 <p className="text-lg leading-relaxed text-pharma-gray mb-6">
-                  Swefn Pharmaceutical Private Limited is an established pharmaceutical manufacturer based in Ahmedabad, Gujarat, India.
-                  We specialize in the production of solid oral dosage forms, specifically tablets and capsules, with a manufacturing capacity of 100 million units per month.
+                  Swefn Pharmaceutical Private Limited is an Ahmedabad-based manufacturer focused on dependable tablets and capsules for domestic and international partners.
                 </p>
                 <p className="text-lg leading-relaxed text-pharma-gray">
-                  Our company is locally and globally integrated, offering a wide range of products and services to meet both domestic and international regulatory standards, including those set by PICs and MHRA.
+                  Discover our manufacturing capabilities, quality systems, and product portfolio built around consistent standards and responsive partnership.
                 </p>
               </div>
             </div>
@@ -168,6 +183,31 @@ export default function Index() {
                 <h3 className="font-semibold text-pharma-gray">{category}</h3>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quality & Compliance */}
+      <section className="bg-slate-900 py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.5fr]">
+            <div>
+              <p className="mb-3 text-sm font-bold tracking-[0.2em] text-red-400">QUALITY FIRST</p>
+              <h2 className="text-3xl font-bold text-white lg:text-4xl">Built around compliance and control.</h2>
+              <p className="mt-4 leading-relaxed text-slate-300">Our production and testing systems are designed to support consistent quality across every batch.</p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {[
+                { title: "PICs", text: "International quality framework" },
+                { title: "MHRA", text: "Regulatory standards aligned" },
+                { title: "100%", text: "Clean room production areas" },
+              ].map((item) => (
+                <div key={item.title} className="rounded-xl border border-slate-700 bg-slate-800 p-5">
+                  <div className="mb-2 text-2xl font-bold text-red-400">{item.title}</div>
+                  <div className="text-sm leading-relaxed text-slate-300">{item.text}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
