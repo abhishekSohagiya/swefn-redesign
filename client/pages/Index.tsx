@@ -282,6 +282,43 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Client Partners */}
+      <section className="border-t border-gray-200 bg-white py-16">
+        <div className="container mx-auto px-6">
+          <div className="mb-10 text-center">
+            <p className="mb-3 text-sm font-bold tracking-[0.2em] text-red-500">TRUSTED PARTNERSHIPS</p>
+            <h2 className="text-4xl font-bold text-pharma-gray">Clients we have served</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-pharma-gray">
+              Supporting pharmaceutical businesses with dependable manufacturing and quality-focused service.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 items-center gap-5 md:grid-cols-4">
+            {[
+              {
+                src: "https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2F7dc729282a0b47d0b532be6a0dd38d54",
+                alt: "SMART client logo",
+              },
+              {
+                src: "https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2Fb06f98040a1a4c5ea41a850a694f0258",
+                alt: "Ahhox client logo",
+              },
+              {
+                src: "https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2F9ea8fc353f8a40ce8e855b3d0166de20",
+                alt: "Laboratories client logo",
+              },
+              {
+                src: "https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2Fa7f6a9175301431587f98a49ae4970f7",
+                alt: "Exel client logo",
+              },
+            ].map((client) => (
+              <div key={client.src} className="flex h-32 items-center justify-center rounded-xl border border-gray-200 bg-gray-50 px-6 py-5 transition-colors hover:bg-white hover:shadow-sm">
+                <img src={client.src} alt={client.alt} className="max-h-20 w-full object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-red-500">
         <div className="container mx-auto px-6 text-center">
