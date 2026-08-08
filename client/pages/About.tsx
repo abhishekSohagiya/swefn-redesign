@@ -33,8 +33,14 @@ export default function About() {
       <Header />
 
       <main>
-        <section className="bg-slate-900 py-20 lg:py-28">
-          <div className="container mx-auto px-6">
+        <section className="relative overflow-hidden bg-slate-900 py-20 lg:py-28">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2Faedbdefcd648496ba1bbe92ff552ad7a"
+            alt="Swefn pharmaceutical manufacturing facility"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-950/75"></div>
+          <div className="relative container mx-auto px-6">
             <div className="max-w-3xl">
               <p className="mb-4 text-sm font-bold tracking-[0.2em] text-red-400">ABOUT SWEFN</p>
               <h1 className="text-5xl font-bold leading-tight text-white lg:text-6xl">
