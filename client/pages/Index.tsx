@@ -48,14 +48,16 @@ export default function Index() {
 
       {/* Welcome Section */}
       <section className="border-y border-red-100 bg-red-50 py-10">
-        <div className="container mx-auto grid grid-cols-2 gap-6 px-6 md:grid-cols-4 md:gap-0">
+        <div className="container mx-auto grid grid-cols-2 gap-6 px-6 sm:grid-cols-3 lg:grid-cols-6 lg:gap-0">
           {[
-            { value: "100M", label: "Units per month" },
+            { value: "100M", label: "Tablets / month" },
+            { value: "50M", label: "Capsules / month" },
             { value: "42K", label: "Square feet facility" },
             { value: "PICs", label: "Quality aligned" },
             { value: "MHRA", label: "Standards aligned" },
+            { value: "100%", label: "Clean room areas" },
           ].map((stat, index) => (
-            <div key={stat.value} className={`px-4 text-center ${index > 1 ? "md:border-l md:border-red-200" : index > 0 ? "md:border-l md:border-red-200" : ""}`}>
+            <div key={stat.value + stat.label} className={`px-4 text-center ${index > 0 ? "lg:border-l lg:border-red-200" : ""}`}>
               <div className="text-3xl font-bold text-red-500 lg:text-4xl">{stat.value}</div>
               <div className="mt-1 text-sm font-medium text-pharma-gray">{stat.label}</div>
             </div>
