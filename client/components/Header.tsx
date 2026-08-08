@@ -31,16 +31,12 @@ export default function Header() {
       <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <nav className="flex items-center justify-between">
-            <Link to="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-pharma-gray">
-                  <span className="text-red-500">Swefn</span> Pharmaceutical
-                </div>
-                <div className="text-sm text-gray-500">Private Limited</div>
-              </div>
+            <Link to="/" className="flex items-center">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2F2035508640374024938ce7803f5c1bce?format=webp&width=800&height=1200"
+                alt="Swefn Pharmaceuticals Pvt Ltd"
+                className="h-14 w-auto max-w-[250px] object-contain"
+              />
             </Link>
             
             {/* Desktop Navigation */}
