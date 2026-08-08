@@ -27,6 +27,45 @@ const values = [
   },
 ];
 
+const galleryImages = [
+  ["gallery-2", "Stability testing equipment"],
+  ["gallery-3", "Pharmaceutical processing room"],
+  ["gallery-4", "Controlled dispatch operations"],
+  ["gallery-5", "Analytical laboratory workstation"],
+  ["gallery-6", "Production mixing equipment"],
+  ["gallery-7", "Capsule and tablet processing line"],
+  ["gallery-8", "Clean laboratory workspace"],
+  ["gallery-9", "Packaging and inspection line"],
+  ["gallery-11", "Stability chamber room"],
+  ["gallery-12", "Primary packaging equipment"],
+  ["gallery-13", "Laminar air flow workstation"],
+  ["gallery-14", "Quality control laboratory"],
+  ["gallery-15", "Pharmaceutical processing vessel"],
+  ["gallery-16", "Environmental control equipment"],
+  ["gallery-17", "Tablet compression equipment"],
+  ["gallery-18", "Water testing laboratory"],
+].map(([name, alt]) => ({
+  src: `https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2F${{
+    "gallery-2": "8582a6eab3ff4e50b80683222b6f1573",
+    "gallery-3": "b8d4ee1a37e149d6baa3f173d6add547",
+    "gallery-4": "1bfef7da287e4e5fb950ed253c55356e",
+    "gallery-5": "6e47ccb93f654fcc9cbb09f253e45cac",
+    "gallery-6": "39a692dcaeaf47be9c7dabb1a8c34c3f",
+    "gallery-7": "2eab2fb51df84f8dac5f32b68a93e1c0",
+    "gallery-8": "6a2ccc0a5fee4b2188c19b715fcd686a",
+    "gallery-9": "03834adf3875472392e8cbdaf3c84e0d",
+    "gallery-11": "e52940be12c645f5b2db40aed7a471e6",
+    "gallery-12": "c9d8ef83028d49ada6001bd5f9e3d095",
+    "gallery-13": "e8e472c6061743a39286e658d8e7e2ce",
+    "gallery-14": "d8a4ed75130d4f7f84f21b03951b294d",
+    "gallery-15": "633e4c157d404c2488eaf502766559f3",
+    "gallery-16": "7808ae0a3f9548f88bebeb91ae414023",
+    "gallery-17": "a12060f247694abdb21fbf30a4c31cf7",
+    "gallery-18": "e2a02f957bd94362936fee07bb787200",
+  }[name]}`,
+  alt,
+}));
+
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
@@ -125,6 +164,25 @@ export default function About() {
                   </Card>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-50 py-20 lg:py-24">
+          <div className="container mx-auto px-6">
+            <div className="mb-12 text-center">
+              <p className="mb-3 text-sm font-bold tracking-[0.2em] text-red-500">INSIDE SWEFN</p>
+              <h2 className="text-4xl font-bold text-pharma-gray">Our facility in focus</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-pharma-gray">
+                A closer look at the controlled environments, equipment, laboratories, and teams behind our manufacturing capabilities.
+              </p>
+            </div>
+            <div className="grid auto-rows-[180px] grid-cols-2 gap-4 md:grid-cols-4">
+              {galleryImages.map((image, index) => (
+                <div key={image.src} className={`overflow-hidden rounded-xl bg-white shadow-sm ${index === 0 ? "col-span-2 row-span-2" : index === 5 ? "md:col-span-2" : ""}`}>
+                  <img src={image.src} alt={image.alt} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+                </div>
+              ))}
             </div>
           </div>
         </section>
