@@ -471,7 +471,7 @@ export default function Products() {
             <Button
               onClick={handleBackClick}
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-red-500 mb-6"
+              className="border-white bg-white text-red-500 hover:bg-red-50 hover:text-red-700 mb-6"
             >
               <ArrowLeft className="mr-2 w-4 h-4" />
               Back to All Categories

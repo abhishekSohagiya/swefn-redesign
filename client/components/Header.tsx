@@ -59,7 +59,7 @@ export default function Header() {
             </div>
             
             <div className="hidden items-center gap-3 lg:flex">
-              <Button asChild variant="outline" className="border-red-500 text-red-500 hover:bg-red-50">
+              <Button asChild variant="outline" className="border-red-500 text-red-500 hover:bg-red-100 hover:text-red-700">
                 <a href="/Swefn%20Brochure.pdf" download="Swefn-Brochure.pdf">
                   <Download className="h-4 w-4" />
                   Download Brochure
@@ -98,7 +98,7 @@ export default function Header() {
                 <Link to="/contact" className="text-pharma-gray hover:text-red-500 transition-colors font-medium">
                   CONTACT
                 </Link>
-                <Button asChild variant="outline" className="w-full border-red-500 text-red-500 hover:bg-red-50">
+                <Button asChild variant="outline" className="w-full border-red-500 text-red-500 hover:bg-red-100 hover:text-red-700">
                   <a href="/Swefn%20Brochure.pdf" download="Swefn-Brochure.pdf">
                     <Download className="h-4 w-4" />
                     Download Brochure
