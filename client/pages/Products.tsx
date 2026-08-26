@@ -17,7 +17,7 @@ import {
   Package,
   Tablet,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Product {
   name: string;
@@ -39,6 +39,15 @@ interface ProductCategory {
 export default function Products() {
   const [selectedCategory, setSelectedCategory] =
     useState<ProductCategory | null>(null);
+  const productTableRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (selectedCategory) {
+      requestAnimationFrame(() => {
+        productTableRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  }, [selectedCategory]);
 
   const productCategories: ProductCategory[] = [
     {
@@ -486,7 +495,7 @@ export default function Products() {
         </section>
 
         {/* Products Table */}
-        <section className="py-20 bg-white">
+        <section ref={productTableRef} className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-pharma-gray mb-4">
