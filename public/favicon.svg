@@ -1,3 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
-  <image href="https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2F2035508640374024938ce7803f5c1bce?format=webp&amp;width=800&amp;height=1200" x="0" y="0" width="800" height="256" preserveAspectRatio="none" />
+  <rect width="220" height="220" rx="34" fill="#ffffff"/>
+  <path fill="#202124" d="M46 18h24v184H46zM79 18h24v184H79zM112 18h24v184h-24zM145 18h24v184h-24z"/>
+  <path fill="#ed1b2f" d="M18 59c26 23 53 34 83 39 28 5 52 17 66 36 12 16 11 34 0 49-14 19-40 23-64 13l-14-6v-28l20 8c12 5 24 2 29-6 5-8 2-17-9-23-12-7-28-11-48-14-29-4-57-16-79-34V59z"/>
+  <path fill="#ed1b2f" d="M18 78h25v124H18zM112 122h24v80h-24z"/>
 </svg>
