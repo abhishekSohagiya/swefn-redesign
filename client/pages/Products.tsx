@@ -18,6 +18,7 @@ import {
   Tablet,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 interface Product {
   name: string;
@@ -39,6 +40,7 @@ interface ProductCategory {
 export default function Products() {
   const [selectedCategory, setSelectedCategory] =
     useState<ProductCategory | null>(null);
+  const [searchParams] = useSearchParams();
   const productTableRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -451,6 +453,21 @@ export default function Products() {
       ],
     },
   ];
+
+  useEffect(() => {
+    const categoryName = searchParams.get("category");
+    if (!categoryName) {
+      setSelectedCategory(null);
+      return;
+    }
+
+    const category = productCategories.find(
+      (item) => item.name.toLowerCase() === categoryName.toLowerCase(),
+    );
+    if (category) {
+      setSelectedCategory(category);
+    }
+  }, [searchParams]);
 
   const handleCategoryClick = (category: ProductCategory) => {
     setSelectedCategory(category);
