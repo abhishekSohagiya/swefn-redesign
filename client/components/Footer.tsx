@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Heart } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -68,11 +68,6 @@ export default function Footer() {
               <MapPin className="w-4 h-4 mr-2 text-red-500" />
               <span className="text-sm">Ahmedabad, Gujarat, India</span>
             </div>
-          </div>
-          <div className="text-center mt-4">
-            <p className="flex items-center justify-center text-pharma-gray text-sm">
-              Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> for healthy lives
-            </p>
           </div>
         </div>
       </div>
