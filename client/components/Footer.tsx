@@ -8,10 +8,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
+            <Link to="/" className="mb-4 flex items-center space-x-3">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fcf961b899c174ee6aab3153d65ab89f9%2F0aef716fa1e3464da7f7c8d595de06b5?format=webp&width=800&height=1200"
+                alt="Swefn logo"
+                className="h-12 w-10 object-contain"
+              />
               <div>
                 <div className="text-xl font-bold text-pharma-gray">
                   <span className="text-red-500">Swefn</span> Pharmaceutical
