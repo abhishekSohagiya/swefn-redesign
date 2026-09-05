@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
   },
-  base: "/swefn-redesign/",
+  base: "/",
   build: {
     outDir: "dist/spa",
   },
