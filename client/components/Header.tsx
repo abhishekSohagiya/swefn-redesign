@@ -25,6 +25,7 @@ function ProductTypeLinks({ onSelect }: { onSelect?: () => void }) {
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
 
   return (
     <>
@@ -102,7 +103,12 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               className="p-2 lg:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+                if (isMenuOpen) {
+                  setIsProductsMenuOpen(false);
+                }
+              }}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -111,7 +117,7 @@ export default function Header() {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="mt-4 border-t border-gray-200 pb-4 lg:hidden">
+            <div className="mt-4 max-h-[calc(100vh-8rem)] overflow-y-auto overscroll-contain border-t border-gray-200 pb-4 pr-2 lg:hidden">
               <div className="flex flex-col space-y-4 pt-4">
                 <Link to="/" className="font-medium text-pharma-gray transition-colors hover:text-red-500">
                   HOME
@@ -120,16 +126,31 @@ export default function Header() {
                   MANUFACTURING
                 </Link>
                 <div>
-                  <Link
-                    to="/products"
-                    className="flex items-center gap-1 font-medium text-pharma-gray transition-colors hover:text-red-500"
-                  >
-                    PRODUCTS
-                    <ChevronDown className="h-4 w-4" />
-                  </Link>
-                  <div className="ml-4 mt-2 grid grid-cols-2 gap-x-4 gap-y-1 border-l-2 border-red-100 pl-3">
-                    <ProductTypeLinks onSelect={() => setIsMenuOpen(false)} />
+                  <div className="flex items-center justify-between">
+                    <Link
+                      to="/products"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="font-medium text-pharma-gray transition-colors hover:text-red-500"
+                    >
+                      PRODUCTS
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setIsProductsMenuOpen(!isProductsMenuOpen)}
+                      aria-expanded={isProductsMenuOpen}
+                      aria-label={isProductsMenuOpen ? "Collapse product types" : "Expand product types"}
+                      className="rounded p-1 text-pharma-gray transition-colors hover:bg-red-50 hover:text-red-500"
+                    >
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform ${isProductsMenuOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
                   </div>
+                  {isProductsMenuOpen && (
+                    <div className="ml-4 mt-2 grid grid-cols-2 gap-x-4 gap-y-1 border-l-2 border-red-100 pl-3">
+                      <ProductTypeLinks onSelect={() => setIsMenuOpen(false)} />
+                    </div>
+                  )}
                 </div>
                 <Link to="/about" className="font-medium text-pharma-gray transition-colors hover:text-red-500">
                   ABOUT US
