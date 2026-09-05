@@ -35,11 +35,23 @@ export default function Header() {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4" />
-              <span>info@swefnpharma.com</span>
+              <a
+                href="mailto:info@swefnpharma.com"
+                className="transition-colors hover:text-red-100"
+                aria-label="Email Swefn Pharmaceutical"
+              >
+                info@swefnpharma.com
+              </a>
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4" />
-              <span>+91 8153050666</span>
+              <a
+                href="tel:+918153050666"
+                className="transition-colors hover:text-red-100"
+                aria-label="Call Swefn Pharmaceutical"
+              >
+                +91 8153050666
+              </a>
             </div>
           </div>
           <div className="hidden md:block">
@@ -99,6 +111,17 @@ export default function Header() {
               </Button>
               <Button className="bg-red-500 text-white hover:bg-red-600">Get Quote</Button>
             </div>
+
+            <Button
+              asChild
+              variant="outline"
+              className="ml-auto mr-2 flex items-center gap-1 border-red-500 px-2 text-red-500 hover:bg-red-100 hover:text-red-700 sm:px-3 lg:hidden"
+            >
+              <a href={brochureHref} download="Swefn-Brochure.pdf" aria-label="Download Swefn brochure">
+                <Download className="h-4 w-4" />
+                <span className="hidden sm:inline">Brochure</span>
+              </a>
+            </Button>
 
             {/* Mobile Menu Button */}
             <button
