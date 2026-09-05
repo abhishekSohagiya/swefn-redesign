@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { productCategories } from "@/data/productCatalog";
 
+const brochureHref = `${import.meta.env.BASE_URL}Swefn%20Brochure.pdf`;
+
 function ProductTypeLinks({ onSelect }: { onSelect?: () => void }) {
   return (
     <>
@@ -89,7 +91,7 @@ export default function Header() {
 
             <div className="hidden items-center gap-3 lg:flex">
               <Button asChild variant="outline" className="border-red-500 text-red-500 hover:bg-red-100 hover:text-red-700">
-                <a href="/Swefn%20Brochure.pdf" download="Swefn-Brochure.pdf">
+                <a href={brochureHref} download="Swefn-Brochure.pdf">
                   <Download className="h-4 w-4" />
                   Download Brochure
                 </a>
@@ -136,7 +138,7 @@ export default function Header() {
                   CONTACT
                 </Link>
                 <Button asChild variant="outline" className="w-full border-red-500 text-red-500 hover:bg-red-100 hover:text-red-700">
-                  <a href="/Swefn%20Brochure.pdf" download="Swefn-Brochure.pdf">
+                  <a href={brochureHref} download="Swefn-Brochure.pdf">
                     <Download className="h-4 w-4" />
                     Download Brochure
                   </a>
