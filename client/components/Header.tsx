@@ -2,31 +2,19 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X, Phone, Mail, Download } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-const productTypes = [
-  "Antibiotics",
-  "Antidiabetic",
-  "Antifungal",
-  "Anti-Inflammatory",
-  "Cardiovascular",
-  "Gastrointestinal",
-  "Neuropathy",
-  "Respiratory",
-  "Steroids",
-  "Vitamins",
-];
+import { productCategories } from "@/data/productCatalog";
 
 function ProductTypeLinks({ onSelect }: { onSelect?: () => void }) {
   return (
     <>
-      {productTypes.map((category) => (
+      {productCategories.map((category) => (
         <Link
-          key={category}
-          to={`/products?category=${encodeURIComponent(category)}`}
+          key={category.name}
+          to={`/products?category=${encodeURIComponent(category.name)}`}
           onClick={onSelect}
           className="block rounded-md px-3 py-2 text-sm text-pharma-gray transition-colors hover:bg-red-50 hover:text-red-500"
         >
-          {category}
+          {category.name}
         </Link>
       ))}
     </>

@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { productCategories as suppliedProductCategories, type ProductCategory as CatalogProductCategory } from "@/data/productCatalog";
 
 interface Product {
   name: string;
@@ -39,7 +40,7 @@ interface ProductCategory {
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] =
-    useState<ProductCategory | null>(null);
+    useState<CatalogProductCategory | null>(null);
   const [searchParams] = useSearchParams();
   const productTableRef = useRef<HTMLElement>(null);
 
@@ -51,7 +52,7 @@ export default function Products() {
     }
   }, [selectedCategory]);
 
-  const productCategories: ProductCategory[] = [
+  const legacyProductCategories: ProductCategory[] = [
     {
       name: "Antibiotics",
       icon: Shield,
@@ -454,6 +455,8 @@ export default function Products() {
     },
   ];
 
+  const productCategories = suppliedProductCategories;
+
   useEffect(() => {
     const categoryName = searchParams.get("category");
     if (!categoryName) {
@@ -469,7 +472,7 @@ export default function Products() {
     }
   }, [searchParams]);
 
-  const handleCategoryClick = (category: ProductCategory) => {
+  const handleCategoryClick = (category: CatalogProductCategory) => {
     setSelectedCategory(category);
   };
 
@@ -532,19 +535,10 @@ export default function Products() {
                       Product Name
                     </th>
                     <th className="text-left py-4 px-4 font-semibold text-pharma-gray">
-                      Strength
+                      Pack Type
                     </th>
                     <th className="text-left py-4 px-4 font-semibold text-pharma-gray">
-                      Dosage Form
-                    </th>
-                    <th className="text-left py-4 px-4 font-semibold text-pharma-gray">
-                      Packaging
-                    </th>
-                    <th className="text-left py-4 px-4 font-semibold text-pharma-gray">
-                      Indication
-                    </th>
-                    <th className="text-left py-4 px-4 font-semibold text-pharma-gray">
-                      Composition
+                      Packing
                     </th>
                   </tr>
                 </thead>
@@ -557,7 +551,7 @@ export default function Products() {
                       <td className="py-4 px-4">
                         <div className="flex items-center">
                           <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center mr-3">
-                            {product.dosageForm.includes("Capsule") ? (
+                            {product.name.includes("Capsule") ? (
                               <Pill className="w-5 h-5 text-red-500" />
                             ) : (
                               <Tablet className="w-5 h-5 text-red-500" />
@@ -571,22 +565,13 @@ export default function Products() {
                         </div>
                       </td>
                       <td className="py-4 px-4 text-pharma-gray">
-                        {product.strength}
-                      </td>
-                      <td className="py-4 px-4 text-pharma-gray">
-                        {product.dosageForm}
+                        {product.packType}
                       </td>
                       <td className="py-4 px-4">
                         <div className="flex items-center text-pharma-gray">
-                          <Package className="w-4 h-4 mr-2 text-red-500" />
-                          {product.packaging}
+                          <Package className="mr-2 h-4 w-4 shrink-0 text-red-500" />
+                          {product.packing}
                         </div>
-                      </td>
-                      <td className="py-4 px-4 text-pharma-gray">
-                        {product.indication}
-                      </td>
-                      <td className="py-4 px-4 text-pharma-gray font-mono text-sm">
-                        {product.composition}
                       </td>
                     </tr>
                   ))}
@@ -663,8 +648,8 @@ export default function Products() {
               Therapeutic Categories
             </h2>
             <p className="text-xl text-pharma-gray max-w-2xl mx-auto">
-              Select a category to view detailed product specifications,
-              strengths, and packaging information
+              Select a category to view the available products, pack types, and
+              packing configurations from our current product list.
             </p>
           </div>
 
